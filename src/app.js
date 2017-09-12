@@ -13,9 +13,9 @@ console.log('App is running...');
 // );
 
 var user = {
-  // name: 'Anakin Skywalker',
-  // age: 21,
-  // location: "Corsucant"
+  name: 'Anakin Skywalker',
+  age: 17,
+  location: "Corsucant"
 };
 
 var getLocation = (location) => {
@@ -26,8 +26,8 @@ var getLocation = (location) => {
 
 var template = (
   <div className="container">
-    <h1>{user.name ? user.name : 'anonymous'}</h1>
-    <p>Age: {user.age ? user.age : undefined}</p>
+    <h1>{user.name ? user.name : 'Anonymous'}</h1>
+    {user.age >= 18 && <p>Age: {user.age}</p>}
     {getLocation(user.location)}
   </div>
 );

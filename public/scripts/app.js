@@ -15,9 +15,9 @@ console.log('App is running...');
 // );
 
 var user = {
-  // name: 'Anakin Skywalker',
-  // age: 21,
-  // location: "Corsucant"
+  name: 'Anakin Skywalker',
+  age: 17,
+  location: "Corsucant"
 };
 
 var getLocation = function getLocation(location) {
@@ -37,13 +37,13 @@ var template = React.createElement(
   React.createElement(
     'h1',
     null,
-    user.name ? user.name : 'anonymous'
+    user.name ? user.name : 'Anonymous'
   ),
-  React.createElement(
+  user.age >= 18 && React.createElement(
     'p',
     null,
     'Age: ',
-    user.age ? user.age : undefined
+    user.age
   ),
   getLocation(user.location)
 );
