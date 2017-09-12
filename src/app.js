@@ -19,10 +19,8 @@ var user = {
 };
 
 var getLocation = (location) => {
-  if (!location) {
-    return 'Unknown';
-  } else {
-    return location;
+  if (location) {
+    return <p>Location: {location}</p>;
   }
 }
 
@@ -30,9 +28,10 @@ var template = (
   <div className="container">
     <h1>{user.name}</h1>
     <p>Age: {user.age}</p>
-    <p>Location: {getLocation(user.location)}</p>
+    {getLocation(user.location)}
   </div>
-)
+);
+
 var appRoot = document.getElementById('app');
 
 ReactDOM.render(template, appRoot);

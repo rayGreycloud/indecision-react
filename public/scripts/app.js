@@ -21,10 +21,13 @@ var user = {
 };
 
 var getLocation = function getLocation(location) {
-  if (!location) {
-    return 'Unknown';
-  } else {
-    return location;
+  if (location) {
+    return React.createElement(
+      'p',
+      null,
+      'Location: ',
+      location
+    );
   }
 };
 
@@ -42,13 +45,9 @@ var template = React.createElement(
     'Age: ',
     user.age
   ),
-  React.createElement(
-    'p',
-    null,
-    'Location: ',
-    getLocation(user.location)
-  )
+  getLocation(user.location)
 );
+
 var appRoot = document.getElementById('app');
 
 ReactDOM.render(template, appRoot);
