@@ -7,15 +7,17 @@ var template = (
   </div>
 );
 
-var username = 'Anakin Skywalker';
-var userAge = 21;
-var userLocation = "Corsucant";
+var user = {
+  name: 'Anakin Skywalker',
+  age: 21,
+  location: "Corsucant"
+};
 
 var templateTwo = (
   <div className="container">
-    <h1>{username}</h1>
-    <p>Age: {userAge}</p>
-    <p>Location: {userLocation}</p>
+    <h1>{user.name}</h1>
+    <p>Age: {user.age}</p>
+    <p>Location: {user.location}</p>
   </div>
 )
 var appRoot = document.getElementById('app');
