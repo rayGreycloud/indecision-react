@@ -17,23 +17,29 @@ var template = React.createElement(
   )
 );
 
+var username = 'Anakin Skywalker';
+var userAge = 21;
+var userLocation = "Corsucant";
+
 var templateTwo = React.createElement(
   'div',
   { className: 'container' },
   React.createElement(
     'h1',
     null,
-    'Anakin Skywalker'
+    username
   ),
   React.createElement(
     'p',
     null,
-    'Age: 10'
+    'Age: ',
+    userAge
   ),
   React.createElement(
     'p',
     null,
-    'Location: Tantooine'
+    'Location: ',
+    userLocation
   )
 );
 var appRoot = document.getElementById('app');
