@@ -2,18 +2,23 @@
 
 console.log('App is running...');
 
-var template = React.createElement(
+var app = {
+  title: 'Indecision App',
+  subtitle: 'Can\'t decide? Let the app decide for you...'
+};
+
+var templateOne = React.createElement(
   'div',
-  null,
+  { className: 'container' },
   React.createElement(
     'h2',
     null,
-    'Indecision App'
+    app.title
   ),
   React.createElement(
-    'p',
+    'h4',
     null,
-    'Can\'t decide? Let the app decide for you...'
+    app.subtitle
   )
 );
 
@@ -46,4 +51,4 @@ var templateTwo = React.createElement(
 );
 var appRoot = document.getElementById('app');
 
-ReactDOM.render(templateTwo, appRoot);
+ReactDOM.render(templateOne, appRoot);

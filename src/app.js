@@ -1,9 +1,14 @@
 console.log('App is running...');
 
-var template = (
-  <div>
-    <h2>Indecision App</h2>
-    <p>Can't decide? Let the app decide for you...</p>
+var app = {
+  title: 'Indecision App',
+  subtitle: 'Can\'t decide? Let the app decide for you...'
+};
+
+var templateOne = (
+  <div className="container">
+    <h2>{app.title}</h2>
+    <h4>{app.subtitle}</h4>
   </div>
 );
 
@@ -22,4 +27,4 @@ var templateTwo = (
 )
 var appRoot = document.getElementById('app');
 
-ReactDOM.render(templateTwo, appRoot);
+ReactDOM.render(templateOne, appRoot);
