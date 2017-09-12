@@ -2,25 +2,17 @@
 
 console.log('App is running...');
 
-var app = {
-  title: 'Indecision App',
-  subtitle: 'Can\'t decide? Let the app decide for you...'
-};
-
-var templateOne = React.createElement(
-  'div',
-  { className: 'container' },
-  React.createElement(
-    'h2',
-    null,
-    app.title
-  ),
-  React.createElement(
-    'h4',
-    null,
-    app.subtitle
-  )
-);
+// var app = {
+//   title: 'Indecision App',
+//   subtitle: 'Can\'t decide? Let the app decide for you...'
+// };
+//
+// var templateOne = (
+//   <div className="container">
+//     <h2>{app.title}</h2>
+//     <h4>{app.subtitle}</h4>
+//   </div>
+// );
 
 var user = {
   name: 'Anakin Skywalker',
@@ -28,7 +20,15 @@ var user = {
   location: "Corsucant"
 };
 
-var templateTwo = React.createElement(
+var getLocation = function getLocation(location) {
+  if (!location) {
+    return 'Unknown';
+  } else {
+    return location;
+  }
+};
+
+var template = React.createElement(
   'div',
   { className: 'container' },
   React.createElement(
@@ -46,9 +46,9 @@ var templateTwo = React.createElement(
     'p',
     null,
     'Location: ',
-    user.location
+    getLocation(user.location)
   )
 );
 var appRoot = document.getElementById('app');
 
-ReactDOM.render(templateOne, appRoot);
+ReactDOM.render(template, appRoot);
