@@ -9,3 +9,18 @@ const user = {
 };
 
 console.log(user.printPlacesLived());
+
+// Challenge
+
+const multiplier = {
+  // create array of numbers to multiply
+  numbers: [5, 8, 13, 21],
+  // multiplyBy - single number
+  multiplyBy: 8,
+  // multiply - return new array with muliplied
+  multiply() {
+    return this.numbers.map((number) => number * this.multiplyBy);
+  }
+};
+
+console.log(multiplier.multiply());

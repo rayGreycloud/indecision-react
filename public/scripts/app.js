@@ -15,3 +15,22 @@ var user = {
 };
 
 console.log(user.printPlacesLived());
+
+// Challenge
+
+var multiplier = {
+  // create array of numbers to multiply
+  numbers: [5, 8, 13, 21],
+  // multiplyBy - single number
+  multiplyBy: 8,
+  // multiply - return new array with muliplied
+  multiply: function multiply() {
+    var _this2 = this;
+
+    return this.numbers.map(function (number) {
+      return number * _this2.multiplyBy;
+    });
+  }
+};
+
+console.log(multiplier.multiply());
