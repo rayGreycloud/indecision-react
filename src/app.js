@@ -1,12 +1,12 @@
 console.log('App is running...');
 
-var app = {
+const app = {
   title: 'Indecision App',
   subtitle: 'Can\'t decide? Let the app decide for you...',
   options: ['One', 'Two']
 };
 
-var templateOne = (
+const templateOne = (
   <div className="container">
     <h2>{app.title}</h2>
     {app.subtitle && <h4>{app.subtitle}</h4>}
@@ -14,19 +14,19 @@ var templateOne = (
   </div>
 );
 
-// var user = {
+// const user = {
 //   name: 'Anakin Skywalker',
 //   age: 21,
 //   location: "Corsucant"
 // };
 //
-// var getLocation = (location) => {
+// const getLocation = (location) => {
 //   if (location) {
 //     return <p>Location: {location}</p>;
 //   }
 // }
 //
-// var template = (
+// const template = (
 //   <div className="container">
 //     <h1>{user.name ? user.name : 'Anonymous'}</h1>
 //     {(user.age && user.age >= 18) && <p>Age: {user.age}</p>}
@@ -34,6 +34,6 @@ var templateOne = (
 //   </div>
 // );
 
-var appRoot = document.getElementById('app');
+const appRoot = document.getElementById('app');
 
 ReactDOM.render(templateOne, appRoot);

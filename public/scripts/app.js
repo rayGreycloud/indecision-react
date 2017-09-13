@@ -28,19 +28,19 @@ var templateOne = React.createElement(
   )
 );
 
-// var user = {
+// const user = {
 //   name: 'Anakin Skywalker',
 //   age: 21,
 //   location: "Corsucant"
 // };
 //
-// var getLocation = (location) => {
+// const getLocation = (location) => {
 //   if (location) {
 //     return <p>Location: {location}</p>;
 //   }
 // }
 //
-// var template = (
+// const template = (
 //   <div className="container">
 //     <h1>{user.name ? user.name : 'Anonymous'}</h1>
 //     {(user.age && user.age >= 18) && <p>Age: {user.age}</p>}
