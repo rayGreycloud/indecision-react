@@ -8,10 +8,10 @@ var user = {
   printPlacesLived: function printPlacesLived() {
     var _this = this;
 
-    this.planets.forEach(function (planet) {
-      console.log(_this.name + ' has lived on ' + planet);
+    return this.planets.map(function (planet) {
+      return _this.name + ' has lived on ' + planet;
     });
   }
 };
 
-user.printPlacesLived();
+console.log(user.printPlacesLived());
