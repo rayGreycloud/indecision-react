@@ -3,7 +3,7 @@
 const user = {
   name: 'Darth',
   planets: ['Tantooine', 'Corsucant', 'Naboo'],
-  printPlacesLived: function () {
+  printPlacesLived() {
     this.planets.forEach((planet) => {
       console.log(this.name + ' has lived on ' + planet);
     });
