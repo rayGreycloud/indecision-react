@@ -20,7 +20,7 @@ var onFormSubmit = function onFormSubmit(e) {
   }
 };
 
-var removeAll = function removeAll() {
+var onRemoveAll = function onRemoveAll() {
   app.options = [];
 
   renderTemplate();
@@ -45,36 +45,28 @@ var renderTemplate = function renderTemplate() {
     React.createElement(
       'p',
       null,
-      app.options.length > 0 ? 'Here are your options' : 'No options'
-    ),
-    React.createElement(
-      'p',
-      null,
-      app.options.length
+      app.options.length > 0 ? 'Here are your options:' : 'No options available - input 2 or more options below'
     ),
     React.createElement(
       'button',
-      { onClick: removeAll },
+      { onClick: onRemoveAll },
       'Remove All'
     ),
     React.createElement(
       'ol',
       null,
-      React.createElement(
-        'li',
-        null,
-        'A'
-      ),
-      React.createElement(
-        'li',
-        null,
-        'B'
-      )
+      app.options.map(function (option) {
+        return React.createElement(
+          'li',
+          { key: option },
+          option
+        );
+      })
     ),
     React.createElement(
       'form',
       { onSubmit: onFormSubmit },
-      React.createElement('input', { type: 'text', name: 'option' }),
+      React.createElement('input', { type: 'text', name: 'option', placeholder: 'add an option' }),
       React.createElement(
         'button',
         null,
