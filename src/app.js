@@ -6,7 +6,7 @@ const app = {
   options: ['One', 'Two']
 };
 
-const templateOne = (
+const template = (
   <div className="container">
     <h2>{app.title}</h2>
     {app.subtitle && <h4>{app.subtitle}</h4>}
@@ -14,26 +14,29 @@ const templateOne = (
   </div>
 );
 
-// const user = {
-//   name: 'Anakin Skywalker',
-//   age: 21,
-//   location: "Corsucant"
-// };
-//
-// const getLocation = (location) => {
-//   if (location) {
-//     return <p>Location: {location}</p>;
-//   }
-// }
-//
-// const template = (
-//   <div className="container">
-//     <h1>{user.name ? user.name : 'Anonymous'}</h1>
-//     {(user.age && user.age >= 18) && <p>Age: {user.age}</p>}
-//     {getLocation(user.location)}
-//   </div>
-// );
+let count = 0;
+const addOne = () => {
+  count++;
+  console.log(`Count: ${count}`);
+};
+const minusOne = () => {
+  count--;
+  console.log(`Count: ${count}`);
+};
+const reset = () => {
+  count = 0;
+  console.log(`Count: ${count}`);
+};
+
+const templateTwo = (
+  <div>
+    <h1>Count: {count}</h1>
+    <button onClick={addOne}>+1</button>
+    <button onClick={minusOne}>-1</button>
+    <button onClick={reset}>reset</button>
+  </div>
+);
 
 const appRoot = document.getElementById('app');
 
-ReactDOM.render(templateOne, appRoot);
+ReactDOM.render(templateTwo, appRoot);
