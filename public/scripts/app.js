@@ -26,6 +26,12 @@ var onRemoveAll = function onRemoveAll() {
   renderTemplate();
 };
 
+var onMakeDecision = function onMakeDecision() {
+  var randomNum = Math.floor(Math.random() * app.options.length);
+  var option = app.options[randomNum];
+  alert(option);
+};
+
 var appRoot = document.getElementById('app');
 
 var renderTemplate = function renderTemplate() {
@@ -46,6 +52,11 @@ var renderTemplate = function renderTemplate() {
       'p',
       null,
       app.options.length > 0 ? 'Here are your options:' : 'No options available - input 2 or more options below'
+    ),
+    React.createElement(
+      'button',
+      { onClick: onMakeDecision },
+      'What should I do?'
     ),
     React.createElement(
       'button',
