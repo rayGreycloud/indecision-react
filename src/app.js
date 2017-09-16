@@ -35,25 +35,35 @@ class Header extends React.Component {
 }
 
 class Action extends React.Component {
+  handlePick() {
+    alert('What should I do button clicked!');
+  }
   render() {
     return (
       <div>
-        <button>What should I do?</button>
+        <button onClick={this.handlePick}>What should I do?</button>
       </div>
     );
   }
 }
 
 class Options extends React.Component {
+  handleRemoveAll() {
+    alert('Remove All button clicked!');
+  }
   render() {
     return (
-      <ol>
-        {
-          this.props.options.map(
-            option => <Option option={option} key={this.props.options.indexOf(option)}/>
-          )
-        }
-      </ol>
+      <div>
+        <button onClick={this.handleRemoveAll}>Remove All</button>
+        <ol>
+          {
+            this.props.options.map(
+              option => <Option option={option} key={this.props.options.indexOf(option)}/>
+            )
+          }
+        </ol>
+      </div>
+
     );
   }
 }
@@ -67,14 +77,20 @@ class Option extends React.Component {
 }
 
 class AddOption extends React.Component {
-  onFormSubmit() {
+  handleAddOption(e) {
     e.preventDefault();
 
-    console.log('Form submitted.');
+    const option = e.target.elements.option.value.trim();
+
+    if (option) {
+      // app.options.push(option);
+      // e.target.elements.option.value = '';
+      alert('Add Option button clicked!');
+    }
   }
   render() {
     return (
-      <form onSubmit={this.onFormSubmit}>
+      <form onSubmit={this.handleAddOption}>
         <input type="text" name="option" placeholder="add an option"/>
         <button>Add Option</button>
       </form>
