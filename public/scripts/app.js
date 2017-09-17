@@ -36,6 +36,13 @@ var Counter = function (_React$Component) {
           count: prevState.count + 1
         };
       });
+
+      // Avoid this method of setting state
+      // Especially if need access to prevState
+      // Multiple async calls can lead to unexpected results
+      // this.setState({
+      //   count: this.state.count + 1
+      // });
     }
   }, {
     key: 'handleMinusOne',
