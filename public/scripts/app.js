@@ -157,43 +157,28 @@ var Options = function (_React$Component2) {
   return Options;
 }(React.Component);
 
-var Option = function (_React$Component3) {
-  _inherits(Option, _React$Component3);
+var Option = function Option(props) {
+  return React.createElement(
+    'li',
+    null,
+    props.option
+  );
+};
 
-  function Option() {
-    _classCallCheck(this, Option);
-
-    return _possibleConstructorReturn(this, (Option.__proto__ || Object.getPrototypeOf(Option)).apply(this, arguments));
-  }
-
-  _createClass(Option, [{
-    key: 'render',
-    value: function render() {
-      return React.createElement(
-        'li',
-        null,
-        this.props.option
-      );
-    }
-  }]);
-
-  return Option;
-}(React.Component);
-
-var AddOption = function (_React$Component4) {
-  _inherits(AddOption, _React$Component4);
+var AddOption = function (_React$Component3) {
+  _inherits(AddOption, _React$Component3);
 
   function AddOption(props) {
     _classCallCheck(this, AddOption);
 
-    var _this5 = _possibleConstructorReturn(this, (AddOption.__proto__ || Object.getPrototypeOf(AddOption)).call(this, props));
+    var _this4 = _possibleConstructorReturn(this, (AddOption.__proto__ || Object.getPrototypeOf(AddOption)).call(this, props));
 
-    _this5.handleAddOption = _this5.handleAddOption.bind(_this5);
+    _this4.handleAddOption = _this4.handleAddOption.bind(_this4);
 
-    _this5.state = {
+    _this4.state = {
       error: undefined
     };
-    return _this5;
+    return _this4;
   }
 
   _createClass(AddOption, [{
