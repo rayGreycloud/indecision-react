@@ -10,7 +10,7 @@ class IndecisionApp extends React.Component {
     this.state = {
       title: 'Indecision',
       subtitle: 'Put your life in the hands of a computer',
-      options: []
+      options: props.options
     }
   }
   handleDeleteOptions() {
@@ -60,6 +60,10 @@ class IndecisionApp extends React.Component {
     )
   }
 }
+
+IndecisionApp.defaultProps = {
+  options: []
+};
 
 const Header = (props) => {
   return (
@@ -135,4 +139,4 @@ class AddOption extends React.Component {
   }
 }
 
-ReactDOM.render(<IndecisionApp />, document.getElementById('app'));
+ReactDOM.render(<IndecisionApp options={['Plan A', 'Plan B']}/>, document.getElementById('app'));
