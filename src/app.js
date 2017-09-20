@@ -11,7 +11,7 @@ class IndecisionApp extends React.Component {
     this.state = {
       title: 'Indecision',
       subtitle: 'Put your life in the hands of a computer',
-      options: props.options
+      options: []
     }
   }
   componentDidMount() {
@@ -31,7 +31,6 @@ class IndecisionApp extends React.Component {
       const json = JSON.stringify(this.state.options)
       localStorage.setItem('options', json);
     }
-
   }
   componentWillUnmount() {
     console.log('component will unmount');
@@ -83,10 +82,6 @@ class IndecisionApp extends React.Component {
     )
   }
 }
-
-IndecisionApp.defaultProps = {
-  options: []
-};
 
 const Header = (props) => {
   return (
