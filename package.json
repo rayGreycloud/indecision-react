@@ -24,6 +24,7 @@
     "babel-preset-react": "^6.24.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-modal": "^2.2.2",
     "validator": "^8.0.0"
   },
   "devDependencies": {
