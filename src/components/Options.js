@@ -13,21 +13,22 @@ const Options = (props) => (
       </button>
 
     </div>
-    <div>
-      {props.options.length === 0 && <p className="widget__message">Please add options to get started</p> }
-      <ol>
+
+    {props.options.length === 0 && <p className="widget__message">Please add options to get started</p> }
+
       {
-        props.options.map(option =>(
+        props.options.map((option, index) =>(
           <Option
             optionText={option}
             key={props.options.indexOf(option)}
+            count={index + 1}
             handleDeleteOption={props.handleDeleteOption}
           />
         ))
       }
-      </ol>
-    </div>
+
   </div>
+
 );
 
 export default Options;
