@@ -32,7 +32,7 @@ class IndecisionApp extends React.Component {
   }
   handleAddOption = (option) => {
     if (!option) {
-      return 'Enter valid value to add option';
+      return 'Enter a valid value to add an option';
     } else if (this.state.options.indexOf(option) > -1) {
       return 'That option already exists';
     }
